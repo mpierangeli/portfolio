@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+    width: 1rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: black;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgba(0,255,255,0.7);
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 3;
+    width: 100vw;
+    height: 5vh; 
+    transition: ease 100ms;
+}
+#menu #to-top{
+    color: white;
+    font-size: 15px;
+    margin-left: 15px;
+    width: 20%;
+}
+#menu a{
+    text-decoration: none;
+    color: rgba(150,255,255);
+    font-size: 17px;
+    text-shadow: 0px 0px 2px rgba(150,255,255);
+}
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    margin-right: 5vw;
+}
+#navbar a:hover{
+    text-shadow: 0px 0px 5px orange;
+    transform: scale(1.1);
+    color: orange;
+    transition: ease 300ms;
+}
+.menu-contacto{ /*VERVER*/
+    color: orange;
+}
+
+#presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+#presentacion video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
+#presentacion .overlay{
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#presentacion header{
+    color: white;
+    z-index: 2;
+    position: absolute;
+    left: 5vw;
+    text-shadow: 0px 0px 3px white;
+    width: 35%;
+    letter-spacing: 5px;
+}
+#presentacion header h1{
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+#presentacion header h2{
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+#about{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.95);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+#about #foto{
+    filter: grayscale(100%);
+    object-fit: cover;
+    height: 100vh;
+    object-position: center 35%;
+}
+
+#about #resumen{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5vw;
+}
+#resumen h3{
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 2vh;
+    letter-spacing: 5px;
+}
+#resumen p{
+    font-size: 25px;
+    line-height: 30px;
+}
+#resumen a{
+    background-color: rgba(150,255,255);
+    color: black;
+    width: 100px;
+    padding: 10px;
+    margin-top: 5vh;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+#resumen a:hover{
+    background-color: orange;
+    transform: scale(1.1);
+    transition: ease 300ms;
+}
+
+#proyectos{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.proyecto{
+    flex: 1;
+    height: 100vh;
+    padding: 8vh 5vw 1vh 5vw;
+    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.proyecto h2{
+    margin-bottom: 4vh;
+    text-align: center;
+    font-size: 30px;
+}
+.proyecto p{
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.proyecto a{
+    font-size: 25px;
+    text-align: center;
+    width: auto;
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+}
+#proyectos #p1{
+    background-color: rgba(201, 130, 0, 0.8);
+}
+#proyectos #p2{
+    background-color: rgba(0,0,0,0.95);
+    color: rgba(255,255,255,0.8);
+}
+#p2 a{
+    color: rgba(255,255,255,0.8);
+}
+#proyectos #p3{
+    background-color: rgba(0, 199, 199, 0.8);
+}
+
+#contacto{
+    width: 100vw;
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+#contacto h2{
+    color:rgba(255,165,0,0.8);
+    letter-spacing: 5px;
+}
+#contacto #menu-contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5vw;
+    width: 70vw;
+}
+#menu-contacto i{
+    transform: scale(5);
+    color: rgba(150,255,255);
+}
+#menu-contacto i:hover{
+    transform: scale(6);
+    color: orange;
+    transition: ease 300ms;
+}
+#contacto footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-shadow: 0px 0px 2px white;
+}
+
+@media (max-width: 1100px){
+    #resumen h3{
+        font-size: 30px;
+    }
+    #resumen p{
+        font-size: 18px;
+    }
+    #proyectos{
+        flex-direction: column;
+    }
+    .proyecto{
+        flex: 1;
+        width: 100vw;
+    }
+    
+    #proyectos #p1{
+        background-color: rgba(201, 130, 0, 0.8);
+        
+    }
+    #proyectos #p2{
+        background-color: rgba(0,0,0,0.95);
+    }
+    #proyectos #p3{
+        background-color: rgba(0, 199, 199, 0.8);
+    }
+
+}
+@media (max-width: 900px){
+
+    #navbar{
+        width: 80%;
+    }
+    #about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #about #foto{
+        object-fit: cover;
+        width: 100vw;
+        max-height: 45vh;
+    }
+    #resumen{
+        padding-bottom: 8vh;
+    }
+    #resumen h3{
+        font-size: 25px;
+    }
+    #resumen p{
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 600px){
+    #menu{
+        height: 10vh; 
+        padding: 10px;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+    #menu-contacto i{
+        transform: scale(3);
+    }
+    #menu-contacto i:hover{
+        transform: scale(4);
+    }
+    #about #foto{
+    }
+    #resumen{
+        padding-bottom: 5vh;
+    }
+}
