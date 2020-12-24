@@ -30,6 +30,7 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     position: fixed;
     background-color: black;
+    padding-right: 5vw;
     opacity: 0.7;
     z-index: 3;
     width: 100vw;
@@ -61,10 +62,19 @@ body::-webkit-scrollbar-thumb{
     color: orange;
     transition: ease 300ms;
 }
-.menu-contacto{ /*VERVER*/
-    color: orange;
+/**********************************************/
+
+#hamb-l{
+    display: none;
+    color: rgba(150,255,255);
+    font-size: 40px;
+    cursor: pointer;
+}
+#hamb-i{
+    display: none;
 }
 
+/******************************************************************************/
 #presentacion{
     display: flex;
     flex-direction: column;
@@ -270,9 +280,38 @@ body::-webkit-scrollbar-thumb{
 }
 @media (max-width: 900px){
 
-    #navbar{
-        width: 80%;
+    #hamb-l{
+        display: flex;
+        padding: 10px;
     }
+
+    #menu input:checked ~ #navbar{
+        display: none;
+    }
+    #menu{
+        flex-direction: column;
+        justify-content: space-around;
+        opacity: 0.9;
+        width: 100vw;
+        height: auto; 
+    }
+    #menu #to-top{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        font-size: 15px;
+        z-index: 2;
+    }
+    #menu a{
+        font-size: 20px;
+    }
+    #menu #navbar{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+    }
+
     #about{
         display: flex;
         flex-direction: column;
@@ -293,5 +332,32 @@ body::-webkit-scrollbar-thumb{
     }
     #resumen p{
         font-size: 15px;
+    }
+}
+
+@media (max-width: 600px){
+
+    #menu-contacto i{
+        transform: scale(2);
+    }
+    #menu-contacto i:hover{
+        transform: scale(3);
+    }
+    #resumen{
+        padding-bottom: 5vh;
+    }
+    #proyecto{
+        height: auto;
+    }
+    #presentacion header{
+        width: 90%;
+    }
+    #presentacion header h1{
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    #presentacion header h2{
+        margin-top: 10px;
+        font-size: 20px;
     }
 }
