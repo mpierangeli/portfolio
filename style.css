@@ -291,6 +291,8 @@ body::-webkit-scrollbar-thumb{
     #menu{
         flex-direction: column;
         justify-content: space-around;
+        
+        padding-right: 0;
         opacity: 0.9;
         width: 100vw;
         height: auto; 
@@ -307,9 +309,11 @@ body::-webkit-scrollbar-thumb{
     }
     #menu #navbar{
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         height: 100vh;
+        gap: 25vh;
+        padding-bottom: 10vh;
     }
 
     #about{
