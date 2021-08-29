@@ -1,7 +1,7 @@
 # Portfolio Personal Martín Pierangeli
 
+  #In progress...
+
 # Contact Me
-  marespierangeli@gmail.com
   mpierangeli@estudiantes.unsam.edu.ar
 
-# Copyright Martín Pierangeli
